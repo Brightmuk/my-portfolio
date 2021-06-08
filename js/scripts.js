@@ -3,14 +3,14 @@ setTimeout(function(){
   $('.loader-bg').fadeToggle();
 },1500);
 
-$(document).bind("contextmenu",function(e) {
-  e.preventDefault();
- });
- $(document).keydown(function(e){
-     if(e.which === 123){
-        return false;
-     }
- });
+// $(document).bind("contextmenu",function(e) {
+//   e.preventDefault();
+//  });
+//  $(document).keydown(function(e){
+//      if(e.which === 123){
+//         return false;
+//      }
+//  });
 
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -108,8 +108,25 @@ function scrollToTop() {
 }
 
 var projectScroll = document.getElementById('projects-list');
-projectScroll.addEventListener("scroll", (event) => {
-    console.log(projectScroll.scrollLeft)
+var i1 = document.getElementById('i-one');
+var i2 = document.getElementById('i-two');
+// var i3 = document.getElementById('i-three');
+ projectScroll.addEventListener("scroll", (event) => {
+
+   var percentage = (projectScroll.scrollLeft/projectScroll.clientWidth)*100
+    if(percentage==0){
+      i1.style.backgroundColor = "rgba(188, 175, 69)"
+      i2.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+      // i3.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+    }else if(percentage==100){
+      i2.style.backgroundColor = "rgba(188, 175, 69)"
+      // i3.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+      i1.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+    // }else if(percentage==200){
+    //   i3.style.backgroundColor = "rgba(188, 175, 69)"
+    //   i1.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+    //   i2.style.backgroundColor = "rgba(188, 175, 69,0.2)"
+    }
 
 });
 

@@ -1,7 +1,6 @@
 .projects{
     background-color: rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid rgba(188, 175, 69,0.7);
-   
 }
 .projects-list{
     display:flex;
@@ -25,7 +24,6 @@
     min-width: 100%;
     margin-top:50px;
     scroll-snap-align: start;
-    border-right: 1px solid rgba(188, 175, 69,0.2);
     
 }
 .project-left{
@@ -90,4 +88,20 @@
 }
 .project-left-b{
     min-width: 200px;
+}
+.count-indicator{
+   
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.count-indicator .indicator{
+    background-color: rgba(188, 175, 69,0.2);
+    height:10px;
+    width:40px;
+    margin-left:10px;
+    border-radius: 20px;
+}
+#i-one{
+    background-color: rgba(188, 175, 69);
 }
